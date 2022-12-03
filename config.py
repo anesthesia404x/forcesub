@@ -6,18 +6,18 @@ from logging.handlers import RotatingFileHandler
 
 load_dotenv("config.env")
 
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
-APP_ID = int(os.environ.get("APP_ID", "0"))
-API_HASH = os.environ.get("API_HASH", "")
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0"))
-OWNER_ID = int(os.environ.get("OWNER_ID", "0")) 
-DB_URI = os.environ.get("DATABASE_URL", "")
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5776737340:AAE-HztwGHrUFIdyUhklWq1Vq4WHDEJsooc")
+APP_ID = int(os.environ.get("APP_ID", "13561314"))
+API_HASH = os.environ.get("API_HASH", "271beccf04bacef8caf3d4bf6e4c7f24")
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001678068384"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5439292327")) 
+DB_URI = os.environ.get("DATABASE_URL", "postgres://nobrooji:lYxjo7uYcbUZ0vGztibCYc9Ux0vU0ZlM@tiny.db.elephantsql.com/nobrooji")
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001856260954"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "5489901568").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
