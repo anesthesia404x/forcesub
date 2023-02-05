@@ -3,9 +3,9 @@
 
 import pyromod.listen
 from pyrogram import Client
-#from pyrogram.enums import ParseMode
+from pyrogram.enums import ParseMode
 import sys
-#from datetime import datetime
+from datetime import datetime
 
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID
 
@@ -26,7 +26,7 @@ class Bot(Client):
     async def start(self):
         await super().start()
         usr_bot_me = await self.get_me()
-      #  self.uptime = datetime.now()
+        self.uptime = datetime.now()
 
         if FORCE_SUB_CHANNEL:
             try:
